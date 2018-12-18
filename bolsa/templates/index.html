@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+    <ul>
+        <li>
+            <a href="{% url 'empresas' %}">Empresas</a>
+        </li>
+
+        <li>
+            <a href="{% url 'acoes' %}">Ações</a>
+        </li>
+
+        <li>
+            <a href="{% url 'cotacoes' %}">Cotações</a>
+        </li>
+
+    </ul>
+{% endblock %}

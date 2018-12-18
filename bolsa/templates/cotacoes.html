@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+    <ul>
+        {% if cotacoes %}
+            {% for cotacao in cotacoes %}
+                <li>
+                    {{cotacao.acao.sigla}} // {{cotacao.valor}}
+                </li>
+            {% endfor %}
+        {% else %}
+            <p>Nenhuma cotação cadastrada</p>
+        {% endif %}
+    </ul>
+
+    <a href="{% url 'add_cotacao' %}"><button>Adicionar Cotação</button></a>
+{% endblock %}

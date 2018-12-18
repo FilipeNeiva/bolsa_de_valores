@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+    <ul>
+        {% if acoes %}
+            {% for acao in acoes %}
+                <li>
+                    {{acao.sigla}}
+                </li>
+            {% endfor %}
+        {% else %}
+            <p>Nenhuma acão cadastrada</p>
+        {% endif %}
+    </ul>
+
+    <a href="{% url 'add_acao' %}"><button>Adicionar Ação</button></a>
+{% endblock %}

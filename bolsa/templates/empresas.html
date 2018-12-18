@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+    <ul>
+        {% if empresas %}
+            {% for empresa in empresas %}
+                <li>
+                    {{empresa.nome}}
+                </li>
+            {% endfor %}
+        {% else %}
+            <p>Nenhuma empresa cadastrada</p>
+        {% endif %}
+    </ul>
+
+    <a href="{% url 'add_empresa' %}"><button>Adicionar Empresa</button></a>
+{% endblock %}
